@@ -1,0 +1,27 @@
+{
+  "name": "@game/graphql",
+  "version": "1.0.0",
+  "scripts": {
+    "load_schema": "gq https://game-server.hasura.app/v1/graphql -H \"x-hasura-admin-secret: sSzO3VE9BCRxuxZieZvlH9Z9iQzYRSxOO0C6tA2Cvi2x1br5rbBebVvTl9wyM9od\" --introspect > gql/schema.graphql",
+    "generate-schema": "graphql-codegen --config codegen.yml"
+  },
+  "peerDependencies": {
+    "graphql": "16.6.0",
+    "next": "13.1.6",
+    "subscriptions-transport-ws": "0.11.0"
+  },
+  "dependencies": {
+    "@apollo/client": "3.7.9",
+    "@graphql-typed-document-node/core": "^3.1.2",
+    "graphql": "16.6.0",
+    "graphql-ws": "5.11.3",
+    "graphqurl": "1.0.1",
+    "next": "13.1.6"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "3.2.1",
+    "@graphql-codegen/typed-document-node": "3.0.1",
+    "@graphql-codegen/typescript": "3.0.1",
+    "@graphql-codegen/typescript-operations": "3.0.1"
+  }
+}

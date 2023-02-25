@@ -1,0 +1,12 @@
+overwrite: true
+schema:
+  - '**/*.graphql'
+documents: './**/*.gql'
+generates:
+  ./index.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      enumsAsTypes: true
